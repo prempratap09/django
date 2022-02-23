@@ -3,7 +3,7 @@ resource "aws_instance" "Bastion-Server" {
   instance_type        = "t2.micro"
   key_name             = "aws-key"
   subnet_id            = aws_subnet.public-subnet-1.id 
-  vpc_security_group_ids = [aws_security_group.load-balancer.id]
+  vpc_security_group_ids = [aws_security_group.ecs.id]
   associate_public_ip_address = true
 
 
